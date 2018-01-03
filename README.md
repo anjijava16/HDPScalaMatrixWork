@@ -5,6 +5,9 @@ spark-submit --class com.iwinner.mm.process.SparkUtils --master local HDPMatrixP
 
 If running Job either yarn or yarn-clinet need to set Hadoop conf or yarn conf
 
+ conf.set("spark.driver.allowMultipleContexts", "true");
+
+
 
 spark-submit --class com.iwinner.mm.main.Main --master yarn HDPMatrixProcess-0.0.1-SNAPSHOT.jar joinsdb /etc/hosts 1001 2018-02-01
 

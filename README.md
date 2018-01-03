@@ -3,6 +3,17 @@ Running This spark submit command
 
 spark-submit --class com.iwinner.mm.process.SparkUtils --master local HDPMatrixProcess-0.0.1-SNAPSHOT.jar /etc/hosts /data/spark1/one
 
+If running Job either yarn or yarn-clinet need to set Hadoop conf or yarn conf
+
+
+spark-submit --class com.iwinner.mm.main.Main --master yarn HDPMatrixProcess-0.0.1-SNAPSHOT.jar joinsdb /etc/hosts 1001 2018-02-01
+
+spark-submit --class com.iwinner.mm.main.Main --master yarn-client HDPMatrixProcess-0.0.1-SNAPSHOT.jar joinsdb /etc/hosts 1001 2018-02-01
+
+
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+
 
 
 

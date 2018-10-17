@@ -3,6 +3,12 @@ Running This spark submit command
 # Spark SUBMIT 
 spark-submit --class com.iwinner.mm.process.SparkUtils --master local HDPMatrixProcess-0.0.1-SNAPSHOT.jar /etc/hosts /data/spark1/one
 
+## Directory structure
+```
+├── config             <== Config files
+
+```
+
 If running Job either yarn or yarn-clinet need to set Hadoop conf or yarn conf
 
  conf.set("spark.driver.allowMultipleContexts", "true");
